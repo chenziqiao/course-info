@@ -1,6 +1,6 @@
 ### Assignments for CIS 355
 
-There are three major assignments in CIS 355.  Overviews follow.
+There are four major assignments in CIS 355.  Overviews follow.
 
 - Transactional Database Development (20 pts)
     - Your team has selected a chapter from the Kimball textbook (from ch. 7-16) as a "case study" for the course project.  In the first series of assignments, you will design and build a transactional (operational) database for the case study.  This should get you up to speed with SQL, ER Diagramming, and the basics of logical/physical database implementation.
@@ -23,3 +23,10 @@ There are three major assignments in CIS 355.  Overviews follow.
     - **Subtasks:**
         - **In-class "Tech Talk" (10pts) (December 3):** In about a 10-12 minute demonstration, show us the highlights of your project.  What do we need to know about the case study to understand the requirements?  What information do your dimensional models provide, and how would those help the organization make better decisions?  What were the special technical challenges posed by this case?
         - **Project Report (10pts) (due December 8):** In a report of at least 20 double-spaced pages, document the stages of your project: transactional database modeling, dimensional model designs, data creation and ETL, and business intelligence application development.  Give the paper a good introduction and conclusion that summarize what you did and what you learned, as well as a cover page and TOC.  You may include screenshots, code samples, and other pertinent information.
+        
+- Dataset Discovery Assignment (5pts -- Individual)
+    - On your own, you are to *find* an interesting data set and consider the analytical possibilities it offers.  In a few pages, do the following:
+        - Tell me where the data set comes from, in both senses:  (a) where did you actually find and download it, and (b) how was it collected or created?
+        - Think dimensionally.  What facts and/or dimensions are in the data, or might be derived from it.
+        - What other data, if combined with your data set, could add up to an interesting or valuable analytical application?  What kind of analyses would you suggest?
+    - Due by the date of the final exam, December 8th.

@@ -54,8 +54,8 @@ manageable chunks, and those chunks may themselves the replicated for
 availability or redundancy.
 
 You should know about the **CAP Theorem**.  In a nutshell, it is claimed that
-no distributed system can achieve all three of the following: **C**onsistency,
-**A**vailability, and **P**artition-tolerance.  Since a sharded or replicated
+no distributed system can achieve all three of the following: Consistency,
+Availability, and Partition-tolerance.  Since a sharded or replicated
 database is by definition "partition-tolerant", this really means you face a
 trade-off of consistency (the ability to be certain that the data you get out
 of the system is correct) and availability (the ability to get a query 
@@ -163,8 +163,11 @@ Some key points:
     - schema-less
 - On the last point, although NoSQL databases usually don't require an *explicit*
   schema, you still have some *implicit* schema in the way you query them.  If you
-  query a NoSQL database for items with the product_id equal to 4555, you *imply*
-  that every product must have a product_id which is a number type.
+  query a NoSQL database for items with the product_id equal to 4555, you imply
+  that every product must have something called "product_id" which is a number. If
+  some products called it "product_num" or "SKU", it would be impossible to use
+  the system.  So the database may not enforce the schema for you, but you still
+  need to have one.
 - The four main types of NoSQL databases are key-value stores, document stores,
   column-oriented databases, and graph databases.
 - The first two types (key-value and document-oriented) are so similar that Fowler
@@ -182,7 +185,7 @@ Some key points:
 - Fowler goes on to give a good explanation of the CAP Theorem and the trade-off
   between consistency and availability.  His "hotel booking" example is worth
   watching again.  The key point: *the trade-off between consistency and
-  availability is a **business** choice*. (36:15 to 39:15)
+  availability is a business choice*. (36:15 to 39:15)
 
 ## MongoDB and MapReduce
 
@@ -275,7 +278,9 @@ they are *logically* structured into tables and rows and columns.  However,
 they are physically organized differently on disk.  While traditional RDBMSs
 keep *rows* together on disk, columnar databases keep *columns* together.
 
-This means that queries which look at a single column across thousands 
+His slide #16 is a good vizualization of this.
+
+What it means is that queries which look at a single column across thousands 
 or millions of rows can run very quickly.  That kind of query is uncommon in 
 transactional systems, but very common in analytical systems like data
 warehouses.
